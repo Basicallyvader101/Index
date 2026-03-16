@@ -6,18 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <script src="script.js">
-        function openMenu() {
-    document.body.classList.add("menu--open");
-}
-
-function closeMenu() {
-    document.body.classList.remove("menu--open");
-}
-    </script>
+        <script src="script.js"></script>
 </head>
 
 <body>
@@ -28,7 +20,14 @@ function closeMenu() {
                     <img class="nav__logo--img" src="assets/logo.2c489fc453a1783cbadacf914efa3df6.svg" alt="LOGO">
                     <div class="nav__logo--title">Treact</div>
                 </div>
-                
+            <div class="nav__links">
+                <a href="#" class="nav__link">About</a>
+                <a href="#" class="nav__link">Blog</a>
+                <a href="#" class="nav__link">Pricing</a>
+                <a href="#" class="nav__link">Contact Us</a>
+                <a href="#" class="nav__link login">Login</a>
+                <a href="#" class="nav__link nav__link--primary">Sign Up</a>
+            </div>
                 <button class="btn__menu" onclick="openMenu()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -39,6 +38,7 @@ function closeMenu() {
                     </svg>
                 </button>
             </div>
+
         </nav>
         <div class="modal">
             <button class="btn__menu btn__menu--close" onclick="closeMenu()">
@@ -49,19 +49,22 @@ function closeMenu() {
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
-            <div class="modal__links">
-                <a class="modal__link">About</a>
-                <a class="modal__link">Blog</a>
-                <a class="modal__link">Pricing</a>
-                <a class="modal__link">Contact Us</a>
-                <a class="modal__link">Login</a>
-                <a class="modal__link modal__link--primary">Sign Up</a>
-            </div>
         </div>
         <header>
             <div class="container">
                 <div class="row">
-                    <!--  -->Enter Header / About Us Section<!--  -->
+                    <h1>Beautiful React Templates <span class="purple">for you.</span></h1>
+                    <p class="header__description--para">Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.</p>
+                    <div class="header__email">
+                        <input type="text" class="header__email--input" placeholder="Your Email Address">
+                        <button class="header__email--btn">Get Started</button>
+                    </div>
+                    <p class="header__customers--title">OUR TRUSTED CUSTOMERS</p>
+                    <img src="./assets/customers-logo-strip.680ac7c2e8ae28161d2c.png" class="header__customers">
+                <figure class="header__img--wrapper">
+                    <img src="./assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg" class="header__img">
+            </figure>
+            </div>
             </div>
         </header>
     </section>
