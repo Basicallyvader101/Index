@@ -225,7 +225,7 @@ nav {
 
 .btn {
     background-color: #6415ff;
-    padding: 12px 32px;
+    padding: 32px 32px;
     border: none;
     border-radius: 500px;
     font-size: 14px;
@@ -731,7 +731,7 @@ VALUES ↓
 .value {
     margin-top: 2rem;
     margin-right: 2rem;
-    align-items: flex-start;
+    align-items: center;
     display: flex;
     flex-direction: column;
 }
