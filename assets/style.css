@@ -1177,6 +1177,7 @@ START / CALL TO ACTION ↓
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(100, 23, 255);
 }
 
 .start__title, .start__buttons {
@@ -1227,7 +1228,7 @@ START / CALL TO ACTION ↓
 
 .start__button:hover:nth-child(2) {
   background-color: rgba(247, 250, 252);
-  color: rgba(100, 21, 255);
+  color: rgba(53, 28, 103, 0.625);
 }
 
 #start .row {
