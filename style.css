@@ -197,7 +197,7 @@ nav {
 
 .nav__link--primary {
     margin: 0;
-    padding: 10px 32px;
+    padding: 12px 32px;
     margin-top: 2px;
     border-radius: 9999px;
     color: #fff;
@@ -236,7 +236,9 @@ nav {
 }
 
 .btn__menu {
-    display: contents;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: transparent;
     border: none;
     transition: all 300ms ease;
@@ -244,6 +246,25 @@ nav {
 
 .btn__menu--svg:hover {
     filter: invert(26%) sepia(94%) saturate(7476%) hue-rotate(261deg) brightness(94%) contrast(115%);
+}
+
+.btn__menu--close {
+    position: fixed;
+    top: 24px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    background: #edf2f7;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.btn__menu--close:hover {
+    background-color: rgb(229, 231, 235);
 }
 
 .modal {
@@ -294,12 +315,6 @@ nav {
     visibility: visible;
     opacity: 1;
     transform: translateX(0);
-}
-
-.btn__menu--close {
-    position: fixed;
-    top: 24px;
-    right: 18px;
 }
 
 .menu {
@@ -369,15 +384,29 @@ section {
 }
 
 header .row {
-    width: 40%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.header__description {
-    width: 40%;
+.header__content {
+    flex-basis: 45%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h1 {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.header__description--para {
+    margin: 24px 0;
 }
 
 .header__description--para {
@@ -392,19 +421,22 @@ header .row {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    flex-basis: 45%;
 }
 
 .header__email--btn {
     z-index: 2;
     margin: 8px;
-    height: calc(100% - 16px);
+  height: auto;
     border-radius: 500px;
-    width: 160px;
+  width: auto;
+  padding: 12px 32px;
     border: none;
     background-color: #6415ff;
     color: #fff;
     font-weight: 700;
-    font-size: 16px;
+  font-size: 14px;
+  line-height: 1.5;
     transition: all 300ms ease;
 }
 
@@ -472,8 +504,10 @@ header {
 }
 
 .header__img--wrapper {
-    width: calc(100% - 40%);
-    align-items: center;
+    width: 50%;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .header__img {
@@ -599,7 +633,7 @@ QUALITY WORK ↓
     width: 50%;
 }
 
-.qualtiy__img--wrapper {
+.quality__img--wrapper {
     border-radius: 4px;
     border: 1px solid rgb(229, 231, 235);
     position: relative;
@@ -873,8 +907,8 @@ PRICING ↓
 }
 
 .plan__bottom {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    display: flex;
+    justify-content: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
@@ -913,28 +947,77 @@ PRICING ↓
     letter-spacing: 0.025em;
 }
 
-.plan__button{
-    border-radius: 0.25rem;
-    background-color: rgb(100 21 255);
-    padding: 0.75rem 2rem;
-    font-weight: 700;
-    color: rgb(247 250 252);
-    transition: all 300ms ease;
-    width: 100%;
+.plan__button--personal {
+    min-width: 160px;
+    height: 48px;
     border-radius: 9999px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    background: linear-gradient(1115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+    color: rgb(247 250 252);
+    font-weight: 700;
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    transition: transform 300ms ease, box-shadow 300ms ease;
 }
 
-.plan__button:hover {
+.plan__button--business {
+    min-width: 160px;
+    height: 48px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+    color: rgb(247 250 252);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.plan__button--large {
+    min-width: 160px;
+    height: 48px;
+    border-radius: 9999px;
+    background: linear-gradient(rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+    color: rgb(247 250 252);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.plan__button--personal:hover,
+.plan__button--business:hover,
+.plan__button--large:hover {
     transform: translate(1px, -1px);
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
-.plan:nth-child(1) .plan__stripe, .plan:nth-child(1) .plan__button {
+.plan__button--personal:hover {
+    background: linear-gradient(1115deg, rgb(40, 135, 130) 0%, rgb(106, 190, 178) 100%);
+}
+
+.plan__button--business:hover {
+    background: linear-gradient(135deg, rgb(55, 59, 155) 0%, rgb(81, 101, 204) 100%);
+}
+
+.plan__button--large:hover {
+    background: linear-gradient(rgb(210, 86, 86) 0%, rgb(243, 157, 157) 100%);
+}
+
+.plan:nth-child(1) .plan__stripe {
     color: #f7fafc;
     background: linear-gradient(
         1115deg,
@@ -951,16 +1034,11 @@ PRICING ↓
     );
 }
 
-.plan:nth-child(2) .plan__button {
-    color: #6415ff;
-    background-color: #f7fafc;
-}
-
-.plan:nth-child(2) .plan__stripes {
+.plan:nth-child(2) .plan__stripe {
     visibility: hidden;
 }
 
-.plan:nth-child(3) .plan__stripe, .plan:nth-child(3) .plan__button {
+.plan:nth-child(3) .plan__stripe {
     color: #f7fafc;
     background: linear-gradient(
         rgb(245, 101, 101) 0%,
@@ -1120,23 +1198,27 @@ section #testimonials {
   align-items: center;
 }
 
-.testimonial__button svg {
+.testimonial__button svg,
+.testimonial__button img {
   width: 16px;
   height: 16px;
 }
 
-.testimonial__button {
+button.testimonial__button {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 48px;
+  height: 48px;
   padding: 16px;
   background: #edf2f7;
   border-radius: 50%;
   margin: 0 12px;
   transition: all 300ms ease;
+  border: none;
 }
 
-.testimonial__button:hover {
+button.testimonial__button:hover {
   background-color: rgb(229, 231, 235);
 }
 
