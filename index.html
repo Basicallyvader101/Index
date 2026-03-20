@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-        <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -20,15 +20,24 @@
                     <img class="nav__logo--img" src="assets/logo.2c489fc453a1783cbadacf914efa3df6.svg" alt="LOGO">
                     <div class="nav__logo--title">Treact</div>
                 </div>
-            <div class="nav__links">
-                <a href="#" class="nav__link">About</a>
-                <a href="#" class="nav__link">Blog</a>
-                <a href="#" class="nav__link">Pricing</a>
-                <a href="#" class="nav__link">Contact Us</a>
-                <a href="#" class="nav__link login">Login</a>
-                <a href="#" class="nav__link nav__link--primary">Sign Up</a>
+                <div class="nav__links">
+                    <a href="#" class="nav__link">About</a>
+                    <a href="#" class="nav__link">Blog</a>
+                    <a href="#" class="nav__link">Pricing</a>
+                    <a href="#" class="nav__link">Contact Us</a>
+                    <a href="#" class="nav__link login">Login</a>
+                    <a href="#" class="nav__link nav__link--primary">Sign Up</a>
+                </div>
+                <button class="btn__menu" onclick="openMenu()" aria-label="Open navigation menu">
+                    <svg class="btn__menu--svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
             </div>
-
         </nav>
         <div class="modal">
             <button class="btn__menu btn__menu--close" onclick="closeMenu()">
@@ -39,6 +48,14 @@
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
+            <div class="modal__links">
+                <a href="#" class="modal__link" onclick="closeMenu()">About</a>
+                <a href="#" class="modal__link" onclick="closeMenu()">Blog</a>
+                <a href="#" class="modal__link" onclick="closeMenu()">Pricing</a>
+                <a href="#" class="modal__link" onclick="closeMenu()">Contact Us</a>
+                <a href="#" class="modal__link" onclick="closeMenu()">Login</a>
+                <a href="#" class="modal__link modal__link--primary" onclick="closeMenu()">Sign Up</a>
+            </div>
         </div>
         <header>
             <div class="container">

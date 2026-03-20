@@ -236,12 +236,19 @@ nav {
 }
 
 .btn__menu {
-    display: inline-flex;
+  display: none;
     align-items: center;
     justify-content: center;
     background: transparent;
     border: none;
+  padding: 4px;
+  color: #243e63;
     transition: all 300ms ease;
+}
+
+.btn__menu--svg {
+  width: 24px;
+  height: 24px;
 }
 
 .btn__menu--svg:hover {
@@ -279,6 +286,9 @@ nav {
     border: 1px solid rgb(229, 231, 235);
     border-radius: 8px;
     z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
     visibility: hidden;
     opacity: 0;
     transform: translateX(300%);
@@ -291,6 +301,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+  justify-content: center;
 }
 
 .modal__link {
@@ -302,6 +313,10 @@ nav {
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
 }
+
+  .modal__link:hover {
+    color: #6415ff;
+  }
 
 .modal__link--primary {
     color: #f7fafc;
@@ -317,59 +332,9 @@ nav {
     transform: translateX(0);
 }
 
-.menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 378px;
-    margin: 24px 16px;
-    padding: 32px;
-    background-color: #fff;
-    border: 1px solid rgb(229, 231, 235);
-    border-radius: 8px;
-    z-index: 4;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(300%);
-    transition: all 300ms ease;
-}
-
 .menu--open {
     max-height: 100vh;
     overflow-y: hidden;
-}
-
-.menu--open .menu {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.menu__links {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.menu__link {
-    color: #1a202c;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.5;
-    margin: 8px 0;
-    padding-bottom: 4px;
-    border-bottom: 2px solid transparent;
-}
-
-.menu__link--primary {
-    color: #f7fafc;
-    padding: 12px 32px;
-    background: #6415ff;
-    border-radius: 500px;
-    border: none;
 }
 
 
@@ -1549,7 +1514,7 @@ MOBILE RESPONSIVENESS ↓
         display: none;
     }
     .btn__menu {
-        display: block;
+    display: inline-flex;
     }
     header .row {
         flex-direction: column;
