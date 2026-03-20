@@ -105,7 +105,7 @@ section {
 }
 
 main {
-    margin-bottom: 96px;
+  margin-bottom: 0;
 }
 
 .header__customers {
@@ -725,6 +725,7 @@ VALUES ↓
 
 #values .btn {
     margin-top: 48px;
+    margin: 48px auto 0px;
 }
 
 .value {
@@ -827,7 +828,7 @@ PRICING ↓
     position: relative;
     margin-top: 4rem;
     display: flex;
-    width: 100%;
+    width: calc(100% / 3);
     max-width: 24rem;
     flex-direction: column;
     border-radius: 0.5rem;
@@ -1054,7 +1055,8 @@ PRICING ↓
   position: relative;
   flex-direction: row;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* 
@@ -1210,7 +1212,8 @@ START / CALL TO ACTION ↓
 
 */
 
-.start__container {
+.start__container,
+#start .row {
     padding: 96px 0;
     width: 100%;
     background-color: rgb(100, 21, 255);
@@ -1228,7 +1231,6 @@ START / CALL TO ACTION ↓
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(100, 23, 255);
 }
 
 .start__title, .start__buttons {
@@ -1282,6 +1284,10 @@ START / CALL TO ACTION ↓
   color: rgba(53, 28, 103, 0.625);
 }
 
+#start .container {
+  padding-bottom: 64px;
+}
+
 #start .row {
   position: relative;
   overflow: hidden;
@@ -1318,7 +1324,7 @@ FOOTER ↓
 
 
 footer {
-    padding: 96px 32px;
+  padding: 72px 32px 96px;
     background-color: rgb(100, 21, 255);
     margin-bottom: -32px;
     position: relative;
@@ -1601,7 +1607,7 @@ MOBILE RESPONSIVENESS ↓
 
   #start .container {
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
   }
 
   .start__row {
@@ -1620,7 +1626,7 @@ MOBILE RESPONSIVENESS ↓
     padding: 16px 32px;
   }
     footer {
-        padding: 80px 32px;
+      padding: 64px 32px 80px;
     }
 }
 
